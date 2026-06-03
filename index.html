@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rebekka Lehmann – IT & KI Beratung Halle</title>
     <style>
-        /* Farbpalette & Barrierefreiheit */
+        /* Modernes & Professionelles Farbschema (Blau, Schwarz, Weiß, Hellgrau) */
         :root {
-            --dunkelblau: #0A2540;
-            --dunkelbraun: #5C4033;
-            --schwarz: #1A1A1A;
-            --weiss: #FFFFFF;
-            --hellgrau: #F8F9FA;
+            --primary-blue: #0A3663;     /* Seriöses, tiefes Marineblau */
+            --accent-blue: #16538E;      /* Etwas helleres Blau für Interaktionen */
+            --text-dark: #222222;        /* Angenehmes Schwarz für Fließtext */
+            --bg-white: #FFFFFF;         /* Reines Weiß */
+            --bg-light: #F4F6F9;         /* Sehr helles Grau für Strukturierung */
+            --border-color: #E2E8F0;     /* Dezente Trennlinien */
         }
 
         * {
@@ -21,201 +22,297 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--schwarz);
-            background-color: var(--weiss);
-            font-size: 18px; /* Etwas größere Grundschrift für bessere Lesbarkeit */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Kopfzeile / Navigation */
-        header {
-            background-color: var(--dunkelblau);
-            color: var(--weiss);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--dunkelbraun);
+        /* Obere Navigationsleiste (Sehr dezent & professionell) */
+        nav {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
         }
 
-        header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: #E0E6ED;
-            font-style: italic;
-        }
-
-        /* Hauptbereich */
-        .container {
-            max-width: 900px;
+        .nav-container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Vorstellung / Hero-Bereich */
-        .intro-section {
+            padding: 0 24px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
-            padding: 40px 10px;
-            background-color: var(--hellgrau);
-            border-radius: 8px;
-            margin-bottom: 40px;
         }
 
-        .intro-image {
-            width: 200px;
-            height: 200px;
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-sub {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Hero / Haupt-Einstiegsbereich */
+        .hero {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--dunkelblau);
-            margin-bottom: 20px;
-            background-color: #DDD; /* Platzhalter falls kein Bild da ist */
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background-color: #E2E8F0;
         }
 
-        .intro-text h2 {
-            color: var(--dunkelblau);
-            margin-bottom: 15px;
-            font-size: 1.6rem;
+        /* Inhalts-Container */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 24px;
         }
 
-        /* Leistungen */
-        .services-section h2 {
-            color: var(--dunkelblau);
+        /* Sektionen Überschriften */
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.6rem;
-            border-bottom: 2px solid var(--hellgrau);
-            padding-bottom: 10px;
+            margin-bottom: 50px;
+            position: relative;
+            font-weight: 700;
         }
 
-        .service-card {
-            background: var(--weiss);
-            border-left: 5px solid var(--dunkelbraun);
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-radius: 0 8px 8px 0;
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            margin: 15px auto 0 auto;
         }
 
-        .service-card h3 {
-            color: var(--dunkelblau);
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+        /* Leistungen im modernen Listen-Stil */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
 
-        /* Kontakt */
-        .contact-section {
-            background-color: var(--dunkelblau);
-            color: var(--weiss);
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 8px;
-            margin-top: 40px;
+        .service-item {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .contact-section h2 {
+        .service-item:hover {
+            box-shadow: 0 6px 18px rgba(10, 54, 99, 0.06);
+        }
+
+        .service-item h3 {
+            color: var(--primary-blue);
+            font-size: 1.35rem;
             margin-bottom: 15px;
-            color: var(--weiss);
+            font-weight: 600;
         }
 
-        .contact-button {
-            display: inline-block;
-            background-color: var(--dunkelbraun);
-            color: var(--weiss);
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
+        .service-item p {
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        /* Kontakt-Bereich (Schlicht, elegant & einladend) */
+        .contact-box {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 50px 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-box h2 {
+            color: var(--primary-blue);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
             font-size: 1.1rem;
-            transition: background 0.3s;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #444;
         }
 
-        .contact-button:hover {
-            background-color: #4A3329;
+        .btn-contact {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--bg-white);
+            padding: 16px 36px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background-color 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-contact:hover {
+            background-color: var(--accent-blue);
         }
 
         /* Fußzeile */
         footer {
-            background-color: var(--schwarz);
-            color: #888;
+            background-color: #1A1A1A;
+            color: #A0AEC0;
             text-align: center;
-            padding: 20px;
-            margin-top: 60px;
-            font-size: 0.9rem;
+            padding: 40px 24px;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            margin-bottom: 15px;
         }
 
         footer a {
-            color: #BBB;
+            color: #E2E8F0;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 12px;
+            transition: color 0.2s;
         }
 
         footer a:hover {
+            color: #FFFFFF;
             text-decoration: underline;
         }
 
-        /* Responsive Design für Smartphones */
-        @media (min-width: 600px) {
-            header h1 { font-size: 2.3rem; }
-            .intro-section { flex-direction: row; text-align: left; padding: 40px; }
-            .intro-image { margin-bottom: 0; margin-right: 40px; }
+        /* Medienabfragen für Desktop-Ansichten */
+        @media (min-width: 768px) {
+            .hero-container {
+                flex-direction: row;
+                text-align: left;
+                padding: 100px 24px;
+            }
+            
+            .hero-text {
+                text-align: left;
+            }
+
+            .hero-text h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero-image {
+                width: 260px;
+                height: 260px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 Spalten nebeneinander auf großen Bildschirmen */
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Rebekka Lehmann</h1>
-        <p>IT & KI Beratung Halle</p>
+    <nav>
+        <div class="nav-container">
+            <div>
+                <div class="brand-name">Rebekka Lehmann</div>
+                <div class="brand-sub">IT & KI Beratung Halle</div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Verständliche IT-Hilfe und Beratung im digitalen Alltag</h1>
+                <p>Als angehende Lehrkraft verbinde ich technisches Fachwissen mit einer geduldigen und strukturierten Arbeitsweise. Gemeinsam meistern wir Ihre Herausforderungen am Computer, Smartphone oder Tablet – ganz ohne Fachchinesisch.</p>
+            </div>
+            <img src="portrait.jpg" alt="Rebekka Lehmann" class="hero-image">
+        </div>
     </header>
 
-    <div class="container">
+    <main class="main-content">
 
-        <section class="intro-section">
-            <img src="portrait.jpg" alt="Rebekka Lehmann" class="intro-image">
-            <div class="intro-text">
-                <h2>Herzlich willkommen!</h2>
-                <p>Als angehende Lehrkraft kombiniere ich mein didaktisches Wissen mit einer tiefen Leidenschaft für moderne Technologie. Mein Ziel ist es, Ihnen die digitale Welt verständlich, geduldig und völlig ohne Fachchinesisch näherzubringen. Egal ob Smartphone, Computer oder moderne KI-Anwendungen – wir gehen den Weg gemeinsam.</p>
+        <section>
+            <h2 class="section-title">Meine Leistungen für Sie</h2>
+            <div class="services-grid">
+                
+                <div class="service-item">
+                    <h3>Individuelle Beratung</h3>
+                    <p>Unabhängige Unterstützung bei der Auswahl neuer Geräte oder Software. Gemeinsam finden wir die passenden Lösungen, die genau auf Ihre persönlichen Bedürfnisse im Alltag zugeschnitten sind.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Technische Probleme lösen</h3>
+                    <p>Schnelle und zuverlässige Unterstützung, wenn die Technik streikt. Egal ob langsame Computer, Probleme mit dem Internetrouter oder Drucker-Einrichtungen – ich helfe Ihnen direkt vor Ort.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Alltagsschulungen &amp; KI</h3>
+                    <p>Schritt-für-Schritt-Erklärungen für die sichere Nutzung von Alltagsprogrammen, Apps oder modernen KI-Tools. Speziell konzipiert für Einsteiger und Senioren, die digitale Sicherheit gewinnen wollen.</p>
+                </div>
+
             </div>
         </section>
 
-        <section class="services-section">
-            <h2>Meine Leistungen für Sie</h2>
-
-            <div class="service-card">
-                <h3>Individuelle Beratung</h3>
-                <p>Sie möchten sich ein neues Gerät anschaffen oder bestehende Systeme optimieren? Ich berate Sie herstellerunabhängig und finde genau die Lösung, die zu Ihren Bedürfnissen und Ihrem Alltag passt.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Schnelle Hilfe bei technischen Problemen</h3>
-                <p>Der Drucker streikt, das Internet funktioniert nicht oder der PC ist plötzlich langsam? Ich helfe Ihnen bei der Fehlersuche und sorge dafür, dass Ihre Technik schnell wieder verlässlich läuft.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Schulungen für die Nutzung im Alltag</h3>
-                <p>Lernen Sie Schritt für Schritt und in Ihrem eigenen Tempo, wie Sie Programme, Apps oder nützliche KI-Tools sicher bedienen. Perfekt für Einsteiger und Senioren, die digitale Souveränität gewinnen möchten.</p>
-            </div>
-        </section>
-
-        <section class="contact-section">
+        <section class="contact-box">
             <h2>Kontakt aufnehmen</h2>
-            <p>Ich freue mich, wenn ich Ihnen helfen kann. Schreiben Sie mir dafür einfach eine Nachricht mit Ihrem Anliegen.</p>
-            <a href="mailto:it.rebekka.lehmann@gmail.com" class="contact-button">E-Mail an mich schreiben</a>
+            <p>Ich freue mich, wenn ich Ihnen helfen kann. Schreiben Sie mir für Ihr Anliegen einfach eine unverbindliche Nachricht per E-Mail.</p>
+            <a href="mailto:it.rebekka.lehmann@gmail.com" class="btn-contact">E-Mail an mich schreiben</a>
         </section>
 
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Rebekka Lehmann. Alle Rechte vorbehalten.</p>
         <p>
-            <a href="impressum.html">Impressum</a> | 
+            <a href="impressum.html">Impressum</a>
             <a href="datenschutz.html">Datenschutzerklärung</a>
         </p>
     </footer>
