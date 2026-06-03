@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rebekka Lehmann – IT & KI Beratung Halle</title>
     <style>
-        /* Modernes & Professionelles Farbschema (Blau, Schwarz, Weiß, Hellgrau) */
+        /* Modernes & Professionelles Farbschema */
         :root {
             --primary-blue: #0A3663;     /* Seriöses, tiefes Marineblau */
             --accent-blue: #16538E;      /* Etwas helleres Blau für Interaktionen */
@@ -30,7 +30,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Obere Navigationsleiste (Sehr dezent & professionell) */
+        /* Obere Navigationsleiste */
         nav {
             background-color: var(--bg-white);
             border-bottom: 1px solid var(--border-color);
@@ -163,14 +163,18 @@
             font-size: 1.05rem;
         }
 
-        /* Kontakt-Bereich (Schlicht, elegant & einladend) */
+        /* Kontakt-Bereich mit integriertem Formular */
         .contact-box {
             background-color: var(--bg-light);
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            padding: 50px 30px;
-            text-align: center;
+            padding: 50px 24px;
             margin-top: 60px;
+        }
+
+        .contact-box-header {
+            text-align: center;
+            margin-bottom: 35px;
         }
 
         .contact-box h2 {
@@ -181,25 +185,73 @@
 
         .contact-box p {
             font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
+            max-width: 650px;
+            margin: 0 auto;
             color: #444;
         }
 
-        .btn-contact {
+        /* Formular Styling */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 1rem;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #CBD5E0;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(10, 54, 99, 0.15);
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .btn-submit {
             display: inline-block;
             background-color: var(--primary-blue);
             color: var(--bg-white);
             padding: 16px 36px;
-            text-decoration: none;
+            border: none;
             border-radius: 4px;
             font-weight: 600;
             font-size: 1.05rem;
+            cursor: pointer;
             transition: background-color 0.2s;
             letter-spacing: 0.3px;
+            text-align: center;
         }
 
-        .btn-contact:hover {
+        .btn-submit:hover {
             background-color: var(--accent-blue);
         }
 
@@ -251,7 +303,11 @@
             }
 
             .services-grid {
-                grid-template-columns: repeat(3, 1fr); /* 3 Spalten nebeneinander auf großen Bildschirmen */
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .contact-box {
+                padding: 50px 60px;
             }
         }
     </style>
@@ -271,7 +327,7 @@
         <div class="hero-container">
             <div class="hero-text">
                 <h1>Verständliche IT-Hilfe und Beratung im digitalen Alltag</h1>
-                <p>Als durch meine Didaktischen erfahrung und Jahzehnte lange erfaung im IT bereich verbinde ich technisches Fachwissen mit einer geduldigen und strukturierten Arbeitsweise. Gemeinsam meistern wir Ihre Herausforderungen am Computer, Smartphone oder Tablet – ganz ohne komplizierte Fachbegriffe</p>
+                <p>Durch meine didaktische Erfahrung und langjährige Praxis im IT-Bereich verbinde ich technisches Fachwissen mit einer geduldigen und strukturierten Arbeitsweise. Gemeinsam meistern wir Ihre Herausforderungen am Computer, Smartphone oder Tablet – ganz ohne komplizierte Fachbegriffe.</p>
             </div>
             <img src="portrait.jpg" alt="Rebekka Lehmann" class="hero-image">
         </div>
@@ -302,9 +358,35 @@
         </section>
 
         <section class="contact-box">
-            <h2>Kontakt aufnehmen</h2>
-            <p>Ich freue mich, wenn ich Ihnen helfen kann. Schreiben Sie mir hierfür einfach Ihr Anliegen in einer unverbindliche Nachricht per E-Mail an: it.rebekka.lehmann@gmail.com.</p>
-            <a href="mailto:it.rebekka.lehmann@gmail.com" class="btn-contact">E-Mail direkt schreiben</a>
+            <div class="contact-box-header">
+                <h2>Kontakt aufnehmen</h2>
+                <p>Ich freue mich, wenn ich Ihnen helfen kann. Nutzen Sie einfach das folgende Formular für eine unverbindliche Nachricht, oder schreiben Sie mir direkt an <a href="mailto:it.rebekka.lehmann@gmail.com" style="color: var(--primary-blue); font-weight: 600;">it.rebekka.lehmann@gmail.com</a>.</p>
+            </div>
+
+            <form action="https://formsubmit.co/it.rebekka.lehmann@gmail.com" method="POST" class="contact-form">
+                
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" value="https://it-rebekka-lehmann.github.io/danke.html">
+                
+                <div class="form-group">
+                    <label for="name">Ihr Name</label>
+                    <input type="text" id="name" name="Name" placeholder="Z. B. Maria Müller" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Ihre E-Mail-Adresse</label>
+                    <input type="email" id="email" name="Email" placeholder="name@beispiel.de" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Ihre Nachricht an mich</label>
+                    <textarea id="message" name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz, wobei Sie Hilfe benötigen..." required></textarea>
+                </div>
+
+                <p class="form-note">Mit dem Absenden des Formulars werden Ihre eingegebenen Daten zur Beantwortung Ihrer Anfrage per E-Mail an mich übermittelt.</p>
+
+                <button type="submit" class="btn-submit">Nachricht senden</button>
+            </form>
         </section>
 
     </main>
