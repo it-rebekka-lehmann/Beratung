@@ -235,6 +235,15 @@
             color: #666;
             line-height: 1.4;
         }
+        
+        .form-note a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .form-note a:hover {
+            text-decoration: underline;
+        }
 
         .btn-submit {
             display: inline-block;
@@ -383,7 +392,7 @@
                     <textarea id="message" name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz, wobei Sie Hilfe benötigen..." required></textarea>
                 </div>
 
-                <p class="form-note">Mit dem Absenden des Formulars werden Ihre eingegebenen Daten zur Beantwortung Ihrer Anfrage per E-Mail an mich übermittelt.</p>
+                <p class="form-note">Mit dem Absenden des Formulars werden Ihre eingegebenen Daten zur Beantwortung Ihrer Anfrage per E-Mail an mich übermittelt. Weitere Informationen finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
 
                 <button type="submit" class="btn-submit">Nachricht senden</button>
             </form>
