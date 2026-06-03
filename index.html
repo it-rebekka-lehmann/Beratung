@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebekka Lehmann – IT & KI Beratung Halle</title>
+    <style>
+        /* Farbpalette & Barrierefreiheit */
+        :root {
+            --dunkelblau: #0A2540;
+            --dunkelbraun: #5C4033;
+            --schwarz: #1A1A1A;
+            --weiss: #FFFFFF;
+            --hellgrau: #F8F9FA;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--schwarz);
+            background-color: var(--weiss);
+            font-size: 18px; /* Etwas größere Grundschrift für bessere Lesbarkeit */
+        }
+
+        /* Kopfzeile / Navigation */
+        header {
+            background-color: var(--dunkelblau);
+            color: var(--weiss);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--dunkelbraun);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #E0E6ED;
+            font-style: italic;
+        }
+
+        /* Hauptbereich */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Vorstellung / Hero-Bereich */
+        .intro-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 10px;
+            background-color: var(--hellgrau);
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .intro-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--dunkelblau);
+            margin-bottom: 20px;
+            background-color: #DDD; /* Platzhalter falls kein Bild da ist */
+        }
+
+        .intro-text h2 {
+            color: var(--dunkelblau);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        /* Leistungen */
+        .services-section h2 {
+            color: var(--dunkelblau);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--hellgrau);
+            padding-bottom: 10px;
+        }
+
+        .service-card {
+            background: var(--weiss);
+            border-left: 5px solid var(--dunkelbraun);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .service-card h3 {
+            color: var(--dunkelblau);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Kontakt */
+        .contact-section {
+            background-color: var(--dunkelblau);
+            color: var(--weiss);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 15px;
+            color: var(--weiss);
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: var(--dunkelbraun);
+            color: var(--weiss);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #4A3329;
+        }
+
+        /* Fußzeile */
+        footer {
+            background-color: var(--schwarz);
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #BBB;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design für Smartphones */
+        @media (min-width: 600px) {
+            header h1 { font-size: 2.3rem; }
+            .intro-section { flex-direction: row; text-align: left; padding: 40px; }
+            .intro-image { margin-bottom: 0; margin-right: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rebekka Lehmann</h1>
+        <p>IT & KI Beratung Halle</p>
+    </header>
+
+    <div class="container">
+
+        <section class="intro-section">
+            <img src="portrait.jpg" alt="Rebekka Lehmann" class="intro-image">
+            <div class="intro-text">
+                <h2>Herzlich willkommen!</h2>
+                <p>Als angehende Lehrkraft kombiniere ich mein didaktisches Wissen mit einer tiefen Leidenschaft für moderne Technologie. Mein Ziel ist es, Ihnen die digitale Welt verständlich, geduldig und völlig ohne Fachchinesisch näherzubringen. Egal ob Smartphone, Computer oder moderne KI-Anwendungen – wir gehen den Weg gemeinsam.</p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Meine Leistungen für Sie</h2>
+
+            <div class="service-card">
+                <h3>Individuelle Beratung</h3>
+                <p>Sie möchten sich ein neues Gerät anschaffen oder bestehende Systeme optimieren? Ich berate Sie herstellerunabhängig und finde genau die Lösung, die zu Ihren Bedürfnissen und Ihrem Alltag passt.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Schnelle Hilfe bei technischen Problemen</h3>
+                <p>Der Drucker streikt, das Internet funktioniert nicht oder der PC ist plötzlich langsam? Ich helfe Ihnen bei der Fehlersuche und sorge dafür, dass Ihre Technik schnell wieder verlässlich läuft.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Schulungen für die Nutzung im Alltag</h3>
+                <p>Lernen Sie Schritt für Schritt und in Ihrem eigenen Tempo, wie Sie Programme, Apps oder nützliche KI-Tools sicher bedienen. Perfekt für Einsteiger und Senioren, die digitale Souveränität gewinnen möchten.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Kontakt aufnehmen</h2>
+            <p>Ich freue mich, wenn ich Ihnen helfen kann. Schreiben Sie mir dafür einfach eine Nachricht mit Ihrem Anliegen.</p>
+            <a href="mailto:it.rebekka.lehmann@gmail.com" class="contact-button">E-Mail an mich schreiben</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Rebekka Lehmann. Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="impressum.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutzerklärung</a>
+        </p>
+    </footer>
+
+</body>
+</html>
