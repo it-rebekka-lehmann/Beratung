@@ -205,4 +205,71 @@
             gap: 8px;
         }
 
-        .form-
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 1rem;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #CBD5E0;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(10, 54, 99, 0.15);
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .form-note a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .form-note a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--bg-white);
+            padding: 16px 36px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-blue);
+        }
+
+        .btn-submit:disabled {
+            background-color: #A0AEC0;
+            cursor: not-allowed;
+        }
+
+        /* Seniorenfreundliche Erfolgs-Box (wird per JavaScript eingeblendet) */
+        .success-message {
+            display: none; /* Standardmäßig unsichtbar */
+            background-color: #F0
