@@ -68,11 +68,11 @@
         }
 
         .hero-container {
-            max-width: 1000px;
+            max-width: 800px; /* Leicht verringert für eine bessere Text-Lesbarkeit ohne Bild */
             margin: 0 auto;
             padding: 0 24px;
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
             gap: 40px;
         }
@@ -94,16 +94,6 @@
             font-size: 1.15rem;
             color: #444;
             margin-bottom: 30px;
-        }
-
-        .hero-image {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            background-color: #E2E8F0;
         }
 
         /* Inhalts-Container */
@@ -298,10 +288,8 @@
         footer a:hover { color: #FFFFFF; text-decoration: underline; }
 
         @media (min-width: 768px) {
-            .hero-container { flex-direction: row; text-align: left; padding: 100px 24px; }
-            .hero-text { text-align: left; }
+            .hero-container { padding: 100px 24px; }
             .hero-text h1 { font-size: 2.6rem; }
-            .hero-image { width: 260px; height: 260px; }
             .services-grid { grid-template-columns: repeat(3, 1fr); }
             .contact-box { padding: 50px 60px; }
         }
@@ -324,7 +312,6 @@
                 <h1>Verständliche IT-Hilfe und Beratung im digitalen Alltag</h1>
                 <p>Durch meine didaktische Erfahrung und langjährige Praxis im IT-Bereich verbinde ich technisches Fachwissen mit einer geduldigen und strukturierten Arbeitsweise. Gemeinsam meistern wir Ihre Herausforderungen am Computer, Smartphone oder Tablet – ganz ohne komplizierte Fachbegriffe.</p>
             </div>
-            <img src="portrait.jpg" alt="Rebekka Lehmann" class="hero-image">
         </div>
     </header>
 
